@@ -14,12 +14,12 @@ use Generated\Shared\Transfer\ShipmentTypeCollectionResponseTransfer;
 class ShipmentTypeValidator implements ShipmentTypeValidatorInterface
 {
     /**
-     * @var list<\Spryker\Zed\ShipmentType\Business\Validator\Rule\ShipmentTypeValidatorRuleInterface>
+     * @var array<\Spryker\Zed\ShipmentType\Business\Validator\Rule\ShipmentTypeValidatorRuleInterface>
      */
     protected array $shipmentTypeValidatorRules = [];
 
     /**
-     * @param list<\Spryker\Zed\ShipmentType\Business\Validator\Rule\ShipmentTypeValidatorRuleInterface> $shipmentTypeValidatorRules
+     * @param array<\Spryker\Zed\ShipmentType\Business\Validator\Rule\ShipmentTypeValidatorRuleInterface> $shipmentTypeValidatorRules
      */
     public function __construct(array $shipmentTypeValidatorRules)
     {

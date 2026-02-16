@@ -83,7 +83,7 @@ class StoreExistsShipmentTypeValidatorRule implements ShipmentTypeValidatorRuleI
     /**
      * @param \ArrayObject<array-key, \Generated\Shared\Transfer\ShipmentTypeTransfer> $shipmentTypeTransfers
      *
-     * @return array<string|int, list<string>>
+     * @return array<string|int, array<string>>
      */
     protected function getStoreNamesGroupedByShipmentTypeEntityIdentifier(ArrayObject $shipmentTypeTransfers): array
     {
@@ -99,7 +99,7 @@ class StoreExistsShipmentTypeValidatorRule implements ShipmentTypeValidatorRuleI
 
     /**
      * @param \Generated\Shared\Transfer\ErrorCollectionTransfer $errorCollectionTransfer
-     * @param list<string> $nonExistingStoreNames
+     * @param array<string> $nonExistingStoreNames
      * @param string|int $entityIdentifier
      *
      * @return \Generated\Shared\Transfer\ErrorCollectionTransfer

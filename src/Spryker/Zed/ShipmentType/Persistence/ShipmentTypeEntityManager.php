@@ -61,7 +61,7 @@ class ShipmentTypeEntityManager extends AbstractEntityManager implements Shipmen
 
     /**
      * @param int $idShipmentType
-     * @param list<int> $idStores
+     * @param array<int> $idStores
      *
      * @return void
      */
@@ -77,7 +77,7 @@ class ShipmentTypeEntityManager extends AbstractEntityManager implements Shipmen
 
     /**
      * @param int $idShipmentType
-     * @param list<int> $idStores
+     * @param array<int> $idStores
      *
      * @return void
      */

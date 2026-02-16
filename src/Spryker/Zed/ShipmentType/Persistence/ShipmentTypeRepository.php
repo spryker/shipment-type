@@ -68,7 +68,7 @@ class ShipmentTypeRepository extends AbstractRepository implements ShipmentTypeR
     /**
      * @module Store
      *
-     * @param list<int> $shipmentTypeIds
+     * @param array<int> $shipmentTypeIds
      *
      * @return array<int, \Generated\Shared\Transfer\StoreRelationTransfer>
      */
@@ -87,9 +87,9 @@ class ShipmentTypeRepository extends AbstractRepository implements ShipmentTypeR
     /**
      * @module Shipment
      *
-     * @param list<int> $shipmentMethodIds
+     * @param array<int> $shipmentMethodIds
      *
-     * @return array<int, list<int>>
+     * @return array<int, array<int>>
      */
     public function getShipmentMethodIdsGroupedByIdShipmentType(array $shipmentMethodIds): array
     {
@@ -120,10 +120,10 @@ class ShipmentTypeRepository extends AbstractRepository implements ShipmentTypeR
      * @module Shipment
      * @module Store
      *
-     * @param list<string> $shipmentTypeUuids
+     * @param array<string> $shipmentTypeUuids
      * @param string $storeName
      *
-     * @return list<int>
+     * @return array<int>
      */
     public function getShipmentMethodIdsByShipmentTypeConditions(array $shipmentTypeUuids, string $storeName): array
     {

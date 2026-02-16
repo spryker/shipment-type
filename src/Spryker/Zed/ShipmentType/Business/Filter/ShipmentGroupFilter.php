@@ -59,7 +59,7 @@ class ShipmentGroupFilter implements ShipmentGroupFilterInterface
     /**
      * @param \ArrayObject<int, \Generated\Shared\Transfer\ItemTransfer> $itemTransfers
      *
-     * @return list<string>
+     * @return array<string>
      */
     protected function extractShipmentTypeUuids(ArrayObject $itemTransfers): array
     {
@@ -74,7 +74,7 @@ class ShipmentGroupFilter implements ShipmentGroupFilterInterface
     /**
      * @param \ArrayObject<array-key, \Generated\Shared\Transfer\ItemTransfer> $itemTransfers
      *
-     * @return list<string>
+     * @return array<string>
      */
     protected function extractShipmentTypeUuidsFromItemTransfers(ArrayObject $itemTransfers): array
     {
@@ -92,7 +92,7 @@ class ShipmentGroupFilter implements ShipmentGroupFilterInterface
     /**
      * @param \ArrayObject<int, \Generated\Shared\Transfer\ItemTransfer> $itemTransfers
      *
-     * @return list<string>
+     * @return array<string>
      */
     protected function extractShipmentTypeUuidsFromItemsShipment(ArrayObject $itemTransfers): array
     {
@@ -122,7 +122,7 @@ class ShipmentGroupFilter implements ShipmentGroupFilterInterface
 
     /**
      * @param \ArrayObject<int, \Generated\Shared\Transfer\ShipmentMethodTransfer> $shipmentMethodTransfers
-     * @param list<int> $availableShipmentMethodIds
+     * @param array<int> $availableShipmentMethodIds
      *
      * @return \ArrayObject<int, \Generated\Shared\Transfer\ShipmentMethodTransfer>
      */

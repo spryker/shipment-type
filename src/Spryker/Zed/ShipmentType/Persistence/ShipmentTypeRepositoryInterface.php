@@ -22,24 +22,24 @@ interface ShipmentTypeRepositoryInterface
     ): ShipmentTypeCollectionTransfer;
 
     /**
-     * @param list<int> $shipmentTypeIds
+     * @param array<int> $shipmentTypeIds
      *
      * @return array<int, \Generated\Shared\Transfer\StoreRelationTransfer>
      */
     public function getShipmentTypeStoreRelationsIndexedByIdShipmentType(array $shipmentTypeIds): array;
 
     /**
-     * @param list<int> $shipmentMethodIds
+     * @param array<int> $shipmentMethodIds
      *
-     * @return array<int, list<int>>
+     * @return array<int, array<int>>
      */
     public function getShipmentMethodIdsGroupedByIdShipmentType(array $shipmentMethodIds): array;
 
     /**
-     * @param list<string> $shipmentTypeUuids
+     * @param array<string> $shipmentTypeUuids
      * @param string $storeName
      *
-     * @return list<int>
+     * @return array<int>
      */
     public function getShipmentMethodIdsByShipmentTypeConditions(array $shipmentTypeUuids, string $storeName): array;
 }

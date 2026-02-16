@@ -95,8 +95,8 @@ class ShipmentTypeStoreRelationUpdater implements ShipmentTypeStoreRelationUpdat
 
     /**
      * @param int $idShipmentType
-     * @param list<int> $storeIdsToAssign
-     * @param list<int> $storeIdsToDeAssign
+     * @param array<int> $storeIdsToAssign
+     * @param array<int> $storeIdsToDeAssign
      *
      * @return void
      */

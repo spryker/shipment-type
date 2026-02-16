@@ -72,7 +72,7 @@ class ShipmentMethodCollectionExpander implements ShipmentMethodCollectionExpand
     }
 
     /**
-     * @param list<int> $shipmentTypeIds
+     * @param array<int> $shipmentTypeIds
      *
      * @return \Generated\Shared\Transfer\ShipmentTypeCriteriaTransfer
      */
@@ -88,7 +88,7 @@ class ShipmentMethodCollectionExpander implements ShipmentMethodCollectionExpand
     /**
      * @param \ArrayObject<array-key, \Generated\Shared\Transfer\ShipmentMethodTransfer> $shipmentMethodTransfers
      *
-     * @return list<int>
+     * @return array<int>
      */
     protected function extractShipmentMethodIdsFromShipmentMethodTransfers(ArrayObject $shipmentMethodTransfers): array
     {
@@ -102,7 +102,7 @@ class ShipmentMethodCollectionExpander implements ShipmentMethodCollectionExpand
 
     /**
      * @param \ArrayObject<array-key, \Generated\Shared\Transfer\ShipmentTypeTransfer> $shipmentTypeTransfers
-     * @param array<int, list<int>> $shipmentMethodIdsGroupedByIdShipmentType
+     * @param array<int, array<int>> $shipmentMethodIdsGroupedByIdShipmentType
      *
      * @return array<int, \Generated\Shared\Transfer\ShipmentTypeTransfer>
      */

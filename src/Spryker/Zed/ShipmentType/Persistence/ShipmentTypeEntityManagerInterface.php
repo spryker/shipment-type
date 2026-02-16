@@ -27,7 +27,7 @@ interface ShipmentTypeEntityManagerInterface
 
     /**
      * @param int $idShipmentType
-     * @param list<int> $idStores
+     * @param array<int> $idStores
      *
      * @return void
      */
@@ -35,7 +35,7 @@ interface ShipmentTypeEntityManagerInterface
 
     /**
      * @param int $idShipmentType
-     * @param list<int> $idStores
+     * @param array<int> $idStores
      *
      * @return void
      */
