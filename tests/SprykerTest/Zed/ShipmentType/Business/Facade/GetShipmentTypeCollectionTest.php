@@ -45,9 +45,6 @@ class GetShipmentTypeCollectionTest extends Unit
      */
     protected ShipmentTypeBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -55,9 +52,6 @@ class GetShipmentTypeCollectionTest extends Unit
         $this->tester->ensureShipmentTypeDatabaseIsEmpty();
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCorrectShipmentTypeByUuid(): void
     {
         // Arrange
@@ -85,9 +79,6 @@ class GetShipmentTypeCollectionTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCorrectShipmentTypeByIdShipmentType(): void
     {
         // Arrange
@@ -115,9 +106,6 @@ class GetShipmentTypeCollectionTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCorrectShipmentTypeByKey(): void
     {
         // Arrange
@@ -145,9 +133,6 @@ class GetShipmentTypeCollectionTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCorrectShipmentTypeByName(): void
     {
         // Arrange
@@ -175,9 +160,6 @@ class GetShipmentTypeCollectionTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCorrectShipmentTypeByIsActiveStatus(): void
     {
         // Arrange
@@ -207,9 +189,6 @@ class GetShipmentTypeCollectionTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCorrectShipmentTypeByStoreName(): void
     {
         // Arrange
@@ -238,9 +217,6 @@ class GetShipmentTypeCollectionTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCorrectShipmentTypeByStoreNamesWithoutDuplicates(): void
     {
         // Arrange
@@ -269,9 +245,6 @@ class GetShipmentTypeCollectionTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsShipmentTypeWithStoreRelations(): void
     {
         // Arrange
@@ -312,9 +285,6 @@ class GetShipmentTypeCollectionTest extends Unit
         $this->assertSame($storeAtTransfer->getIdStoreOrFail(), $retrievedStoreAtTransfer->getIdStore());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsShipmentTypesPaginatedByLimitAndOffset(): void
     {
         // Arrange
@@ -339,9 +309,6 @@ class GetShipmentTypeCollectionTest extends Unit
         $this->assertSame(4, $shipmentTypeCollectionTransfer->getPaginationOrFail()->getNbResults());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsShipmentTypesPaginatedByPageAndMaxPerPage(): void
     {
         // Arrange
@@ -377,9 +344,6 @@ class GetShipmentTypeCollectionTest extends Unit
         $this->assertSame(1, $paginationTransfer->getPreviousPageOrFail());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsShipmentTypesSortedByKeyFieldDesc(): void
     {
         // Arrange
@@ -404,9 +368,6 @@ class GetShipmentTypeCollectionTest extends Unit
         $this->assertSame('abc', $shipmentTypeCollectionIterator->offsetGet(2)->getKeyOrFail());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsShipmentTypesSortedByKeyFieldAsc(): void
     {
         // Arrange
@@ -431,12 +392,6 @@ class GetShipmentTypeCollectionTest extends Unit
         $this->assertSame('ghi', $shipmentTypeCollectionIterator->offsetGet(2)->getKeyOrFail());
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeTransfer $expectedShipmentTypeTransfer
-     * @param \Generated\Shared\Transfer\ShipmentTypeTransfer $actualShipmentTypeTransfer
-     *
-     * @return void
-     */
     protected function assertSameShipmentTypeTransfer(
         ShipmentTypeTransfer $expectedShipmentTypeTransfer,
         ShipmentTypeTransfer $actualShipmentTypeTransfer
@@ -448,12 +403,6 @@ class GetShipmentTypeCollectionTest extends Unit
         $this->assertSame($expectedShipmentTypeTransfer->getIsActiveOrFail(), $actualShipmentTypeTransfer->getIsActive());
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreRelationTransfer $storeRelationTransfer
-     * @param string $storeName
-     *
-     * @return \Generated\Shared\Transfer\StoreTransfer|null
-     */
     protected function findStoreTransferInStoreRelationTransfer(StoreRelationTransfer $storeRelationTransfer, string $storeName): ?StoreTransfer
     {
         foreach ($storeRelationTransfer->getStores() as $storeTransfer) {

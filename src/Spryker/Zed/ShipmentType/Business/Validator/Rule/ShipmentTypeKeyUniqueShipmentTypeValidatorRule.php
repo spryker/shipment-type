@@ -23,9 +23,6 @@ class ShipmentTypeKeyUniqueShipmentTypeValidatorRule implements ShipmentTypeVali
      */
     protected ValidationErrorCreatorInterface $validationErrorCreator;
 
-    /**
-     * @param \Spryker\Zed\ShipmentType\Business\Validator\ErrorCreator\ValidationErrorCreatorInterface $validationErrorCreator
-     */
     public function __construct(ValidationErrorCreatorInterface $validationErrorCreator)
     {
         $this->validationErrorCreator = $validationErrorCreator;

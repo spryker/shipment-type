@@ -46,9 +46,6 @@ class ShipmentTypeBusinessTester extends Actor
      */
     protected const COL_FK_SHIPMENT_TYPE = 'FkShipmentCarrier';
 
-    /**
-     * @return void
-     */
     public function ensureShipmentTypeDatabaseIsEmpty(): void
     {
         $this->ensureDatabaseTableIsEmpty($this->getShipmentTypeQuery());
@@ -69,21 +66,11 @@ class ShipmentTypeBusinessTester extends Actor
         ])->build();
     }
 
-    /**
-     * @param int $idShipmentType
-     *
-     * @return \Orm\Zed\ShipmentType\Persistence\SpyShipmentType|null
-     */
     public function findShipmentTypeEntityByIdShipmentType(int $idShipmentType): ?SpyShipmentType
     {
         return $this->getShipmentTypeQuery()->findOneByIdShipmentType($idShipmentType);
     }
 
-    /**
-     * @param int $idShipmentType
-     *
-     * @return int
-     */
     public function getShipmentTypeStoreRelationCountByIdShipmentType(int $idShipmentType): int
     {
         return $this->getShipmentTypeStoreQuery()
@@ -91,33 +78,21 @@ class ShipmentTypeBusinessTester extends Actor
             ->count();
     }
 
-    /**
-     * @return int
-     */
     public function getShipmentTypeEntitiesCount(): int
     {
         return $this->getShipmentTypeQuery()->count();
     }
 
-    /**
-     * @return \Orm\Zed\ShipmentType\Persistence\SpyShipmentTypeQuery
-     */
     protected function getShipmentTypeQuery(): SpyShipmentTypeQuery
     {
         return SpyShipmentTypeQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\ShipmentType\Persistence\SpyShipmentTypeStoreQuery
-     */
     protected function getShipmentTypeStoreQuery(): SpyShipmentTypeStoreQuery
     {
         return SpyShipmentTypeStoreQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\Shipment\Persistence\SpyShipmentMethodQuery
-     */
     protected function getShipmentMethodQuery(): SpyShipmentMethodQuery
     {
         return SpyShipmentMethodQuery::create();

@@ -39,12 +39,6 @@ class ShipmentTypeStoreRelationUpdater implements ShipmentTypeStoreRelationUpdat
      */
     protected StoreDataExtractorInterface $storeDataExtractor;
 
-    /**
-     * @param \Spryker\Zed\ShipmentType\Persistence\ShipmentTypeRepositoryInterface $shipmentTypeRepository
-     * @param \Spryker\Zed\ShipmentType\Persistence\ShipmentTypeEntityManagerInterface $shipmentTypeEntityManager
-     * @param \Spryker\Zed\ShipmentType\Dependency\Facade\ShipmentTypeToStoreFacadeInterface $storeFacade
-     * @param \Spryker\Zed\ShipmentType\Business\Extractor\StoreDataExtractorInterface $storeDataExtractor
-     */
     public function __construct(
         ShipmentTypeRepositoryInterface $shipmentTypeRepository,
         ShipmentTypeEntityManagerInterface $shipmentTypeEntityManager,
@@ -57,11 +51,6 @@ class ShipmentTypeStoreRelationUpdater implements ShipmentTypeStoreRelationUpdat
         $this->storeDataExtractor = $storeDataExtractor;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeTransfer $shipmentTypeTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeTransfer
-     */
     public function updateShipmentTypeStoreRelations(ShipmentTypeTransfer $shipmentTypeTransfer): ShipmentTypeTransfer
     {
         $requestedStoreRelationTransfer = $shipmentTypeTransfer->getStoreRelationOrFail();

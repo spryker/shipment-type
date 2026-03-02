@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\ShipmentTypeCollectionResponseTransfer;
 
 interface ShipmentTypeUpdaterInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeCollectionRequestTransfer $shipmentTypeCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeCollectionResponseTransfer
-     */
     public function updateShipmentTypeCollection(
         ShipmentTypeCollectionRequestTransfer $shipmentTypeCollectionRequestTransfer
     ): ShipmentTypeCollectionResponseTransfer;

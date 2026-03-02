@@ -26,11 +26,6 @@ class ShipmentTypeValidator implements ShipmentTypeValidatorInterface
         $this->shipmentTypeValidatorRules = $shipmentTypeValidatorRules;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeCollectionRequestTransfer $shipmentTypeCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeCollectionResponseTransfer
-     */
     public function validateCollection(ShipmentTypeCollectionRequestTransfer $shipmentTypeCollectionRequestTransfer): ShipmentTypeCollectionResponseTransfer
     {
         $shipmentTypeTransfers = $shipmentTypeCollectionRequestTransfer->getShipmentTypes();

@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\ShipmentTypeTransfer;
 
 interface ShipmentTypeStoreRelationUpdaterInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeTransfer $shipmentTypeTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeTransfer
-     */
     public function updateShipmentTypeStoreRelations(ShipmentTypeTransfer $shipmentTypeTransfer): ShipmentTypeTransfer;
 }

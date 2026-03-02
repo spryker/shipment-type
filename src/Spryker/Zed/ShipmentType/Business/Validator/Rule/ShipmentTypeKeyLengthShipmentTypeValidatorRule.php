@@ -43,9 +43,6 @@ class ShipmentTypeKeyLengthShipmentTypeValidatorRule implements ShipmentTypeVali
      */
     protected ValidationErrorCreatorInterface $validationErrorCreator;
 
-    /**
-     * @param \Spryker\Zed\ShipmentType\Business\Validator\ErrorCreator\ValidationErrorCreatorInterface $validationErrorCreator
-     */
     public function __construct(ValidationErrorCreatorInterface $validationErrorCreator)
     {
         $this->validationErrorCreator = $validationErrorCreator;
@@ -79,11 +76,6 @@ class ShipmentTypeKeyLengthShipmentTypeValidatorRule implements ShipmentTypeVali
         return $errorCollectionTransfer;
     }
 
-    /**
-     * @param string $key
-     *
-     * @return bool
-     */
     protected function isShipmentTypeKeyLengthValid(string $key): bool
     {
         $keyLength = mb_strlen($key);

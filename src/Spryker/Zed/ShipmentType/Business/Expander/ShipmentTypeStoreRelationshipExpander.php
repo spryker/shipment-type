@@ -18,19 +18,11 @@ class ShipmentTypeStoreRelationshipExpander implements ShipmentTypeStoreRelation
      */
     protected ShipmentTypeRepositoryInterface $shipmentTypeRepository;
 
-    /**
-     * @param \Spryker\Zed\ShipmentType\Persistence\ShipmentTypeRepositoryInterface $shipmentTypeRepository
-     */
     public function __construct(ShipmentTypeRepositoryInterface $shipmentTypeRepository)
     {
         $this->shipmentTypeRepository = $shipmentTypeRepository;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeCollectionTransfer $shipmentTypeCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeCollectionTransfer
-     */
     public function expandShipmentTypeCollectionWithStoreRelationships(
         ShipmentTypeCollectionTransfer $shipmentTypeCollectionTransfer
     ): ShipmentTypeCollectionTransfer {

@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\ShipmentTypeCollectionResponseTransfer;
 
 interface ShipmentTypeValidatorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeCollectionRequestTransfer $shipmentTypeCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeCollectionResponseTransfer
-     */
     public function validateCollection(
         ShipmentTypeCollectionRequestTransfer $shipmentTypeCollectionRequestTransfer
     ): ShipmentTypeCollectionResponseTransfer;

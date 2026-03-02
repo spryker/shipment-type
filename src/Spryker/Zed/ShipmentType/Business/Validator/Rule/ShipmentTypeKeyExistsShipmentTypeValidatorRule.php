@@ -32,10 +32,6 @@ class ShipmentTypeKeyExistsShipmentTypeValidatorRule implements ShipmentTypeVali
      */
     protected ValidationErrorCreatorInterface $validationErrorCreator;
 
-    /**
-     * @param \Spryker\Zed\ShipmentType\Persistence\ShipmentTypeRepositoryInterface $shipmentTypeRepository
-     * @param \Spryker\Zed\ShipmentType\Business\Validator\ErrorCreator\ValidationErrorCreatorInterface $validationErrorCreator
-     */
     public function __construct(ShipmentTypeRepositoryInterface $shipmentTypeRepository, ValidationErrorCreatorInterface $validationErrorCreator)
     {
         $this->shipmentTypeRepository = $shipmentTypeRepository;

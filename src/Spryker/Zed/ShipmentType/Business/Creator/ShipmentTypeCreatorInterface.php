@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\ShipmentTypeCollectionResponseTransfer;
 
 interface ShipmentTypeCreatorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeCollectionRequestTransfer $shipmentTypeCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeCollectionResponseTransfer
-     */
     public function createShipmentTypeCollection(
         ShipmentTypeCollectionRequestTransfer $shipmentTypeCollectionRequestTransfer
     ): ShipmentTypeCollectionResponseTransfer;

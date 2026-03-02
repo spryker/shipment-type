@@ -49,9 +49,6 @@ use Spryker\Zed\ShipmentType\ShipmentTypeDependencyProvider;
  */
 class ShipmentTypeBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\ShipmentType\Business\Reader\ShipmentTypeReaderInterface
-     */
     public function createShipmentTypeReader(): ShipmentTypeReaderInterface
     {
         return new ShipmentTypeReader(
@@ -60,17 +57,11 @@ class ShipmentTypeBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentType\Business\Expander\ShipmentTypeStoreRelationshipExpanderInterface
-     */
     public function createShipmentTypeStoreRelationshipExpander(): ShipmentTypeStoreRelationshipExpanderInterface
     {
         return new ShipmentTypeStoreRelationshipExpander($this->getRepository());
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentType\Business\Creator\ShipmentTypeCreatorInterface
-     */
     public function createShipmentTypeCreator(): ShipmentTypeCreatorInterface
     {
         return new ShipmentTypeCreator(
@@ -81,9 +72,6 @@ class ShipmentTypeBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentType\Business\Creator\ShipmentTypeStoreRelationCreatorInterface
-     */
     public function createShipmentTypeStoreRelationCreator(): ShipmentTypeStoreRelationCreatorInterface
     {
         return new ShipmentTypeStoreRelationCreator(
@@ -93,9 +81,6 @@ class ShipmentTypeBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentType\Business\Updater\ShipmentTypeUpdaterInterface
-     */
     public function createShipmentTypeUpdater(): ShipmentTypeUpdaterInterface
     {
         return new ShipmentTypeUpdater(
@@ -106,9 +91,6 @@ class ShipmentTypeBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentType\Business\Updater\ShipmentTypeStoreRelationUpdaterInterface
-     */
     public function createShipmentTypeStoreRelationUpdater(): ShipmentTypeStoreRelationUpdaterInterface
     {
         return new ShipmentTypeStoreRelationUpdater(
@@ -119,9 +101,6 @@ class ShipmentTypeBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentType\Business\Expander\ShipmentMethodCollectionExpanderInterface
-     */
     public function createShipmentMethodCollectionExpander(): ShipmentMethodCollectionExpanderInterface
     {
         return new ShipmentMethodCollectionExpander(
@@ -130,17 +109,11 @@ class ShipmentTypeBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentType\Business\Validator\ShipmentTypeValidatorInterface
-     */
     public function createShipmentTypeCreateValidator(): ShipmentTypeValidatorInterface
     {
         return new ShipmentTypeValidator($this->getShipmentTypeCreateValidatorRules());
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentType\Business\Validator\ShipmentTypeValidatorInterface
-     */
     public function createShipmentTypeUpdateValidator(): ShipmentTypeValidatorInterface
     {
         return new ShipmentTypeValidator($this->getShipmentTypeUpdateValidatorRules());
@@ -175,9 +148,6 @@ class ShipmentTypeBusinessFactory extends AbstractBusinessFactory
         ];
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentType\Business\Validator\Rule\ShipmentTypeValidatorRuleInterface
-     */
     public function createShipmentTypeKeyExistsShipmentTypeValidatorRule(): ShipmentTypeValidatorRuleInterface
     {
         return new ShipmentTypeKeyExistsShipmentTypeValidatorRule(
@@ -186,33 +156,21 @@ class ShipmentTypeBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentType\Business\Validator\Rule\ShipmentTypeValidatorRuleInterface
-     */
     public function createShipmentTypeKeyLengthShipmentTypeValidatorRule(): ShipmentTypeValidatorRuleInterface
     {
         return new ShipmentTypeKeyLengthShipmentTypeValidatorRule($this->createValidationErrorCreator());
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentType\Business\Validator\Rule\ShipmentTypeValidatorRuleInterface
-     */
     public function createShipmentTypeKeyUniqueShipmentTypeValidatorRule(): ShipmentTypeValidatorRuleInterface
     {
         return new ShipmentTypeKeyUniqueShipmentTypeValidatorRule($this->createValidationErrorCreator());
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentType\Business\Validator\Rule\ShipmentTypeValidatorRuleInterface
-     */
     public function createShipmentTypeNameLengthShipmentTypeValidatorRule(): ShipmentTypeValidatorRuleInterface
     {
         return new ShipmentTypeNameLengthShipmentTypeValidatorRule($this->createValidationErrorCreator());
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentType\Business\Validator\Rule\ShipmentTypeValidatorRuleInterface
-     */
     public function createStoreExistsShipmentTypeValidatorRule(): ShipmentTypeValidatorRuleInterface
     {
         return new StoreExistsShipmentTypeValidatorRule(
@@ -222,9 +180,6 @@ class ShipmentTypeBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentType\Business\Validator\Rule\ShipmentTypeValidatorRuleInterface
-     */
     public function createShipmentTypeExistsShipmentTypeValidatorRule(): ShipmentTypeValidatorRuleInterface
     {
         return new ShipmentTypeExistsShipmentTypeValidatorRule(
@@ -233,41 +188,26 @@ class ShipmentTypeBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentType\Business\Validator\ErrorCreator\ValidationErrorCreatorInterface
-     */
     public function createValidationErrorCreator(): ValidationErrorCreatorInterface
     {
         return new ValidationErrorCreator();
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentType\Business\Grouper\ShipmentTypeGrouperInterface
-     */
     public function createShipmentTypeGrouper(): ShipmentTypeGrouperInterface
     {
         return new ShipmentTypeGrouper();
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentType\Business\Extractor\StoreDataExtractorInterface
-     */
     public function createStoreDataExtractor(): StoreDataExtractorInterface
     {
         return new StoreDataExtractor();
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentType\Business\Filter\ShipmentGroupFilterInterface
-     */
     public function createShipmentGroupFilter(): ShipmentGroupFilterInterface
     {
         return new ShipmentGroupFilter($this->getRepository());
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentType\Dependency\Facade\ShipmentTypeToStoreFacadeInterface
-     */
     public function getStoreFacade(): ShipmentTypeToStoreFacadeInterface
     {
         return $this->getProvidedDependency(ShipmentTypeDependencyProvider::FACADE_STORE);

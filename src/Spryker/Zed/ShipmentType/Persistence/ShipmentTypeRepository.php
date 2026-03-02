@@ -156,12 +156,6 @@ class ShipmentTypeRepository extends AbstractRepository implements ShipmentTypeR
         }, $shipmentMethodIds);
     }
 
-    /**
-     * @param \Orm\Zed\ShipmentType\Persistence\SpyShipmentTypeQuery $shipmentTypeQuery
-     * @param \Generated\Shared\Transfer\ShipmentTypeCriteriaTransfer $shipmentTypeCriteriaTransfer
-     *
-     * @return \Orm\Zed\ShipmentType\Persistence\SpyShipmentTypeQuery
-     */
     protected function applyShipmentTypeFilters(
         SpyShipmentTypeQuery $shipmentTypeQuery,
         ShipmentTypeCriteriaTransfer $shipmentTypeCriteriaTransfer
@@ -204,12 +198,6 @@ class ShipmentTypeRepository extends AbstractRepository implements ShipmentTypeR
         return $shipmentTypeQuery;
     }
 
-    /**
-     * @param \Orm\Zed\ShipmentType\Persistence\SpyShipmentTypeQuery $shipmentTypeQuery
-     * @param \Generated\Shared\Transfer\PaginationTransfer $paginationTransfer
-     *
-     * @return \Propel\Runtime\ActiveQuery\ModelCriteria
-     */
     protected function applyShipmentTypePagination(
         SpyShipmentTypeQuery $shipmentTypeQuery,
         PaginationTransfer $paginationTransfer
@@ -245,12 +233,6 @@ class ShipmentTypeRepository extends AbstractRepository implements ShipmentTypeR
         return $shipmentTypeQuery;
     }
 
-    /**
-     * @param \Orm\Zed\ShipmentType\Persistence\SpyShipmentTypeQuery $shipmentTypeQuery
-     * @param \Generated\Shared\Transfer\ShipmentTypeCriteriaTransfer $shipmentTypeCriteriaTransfer
-     *
-     * @return \Orm\Zed\ShipmentType\Persistence\SpyShipmentTypeQuery
-     */
     protected function applyShipmentTypeSorting(
         SpyShipmentTypeQuery $shipmentTypeQuery,
         ShipmentTypeCriteriaTransfer $shipmentTypeCriteriaTransfer

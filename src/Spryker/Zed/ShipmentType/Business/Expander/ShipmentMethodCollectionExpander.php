@@ -26,10 +26,6 @@ class ShipmentMethodCollectionExpander implements ShipmentMethodCollectionExpand
      */
     protected ShipmentTypeRepositoryInterface $shipmentTypeRepository;
 
-    /**
-     * @param \Spryker\Zed\ShipmentType\Business\Reader\ShipmentTypeReaderInterface $shipmentTypeReader
-     * @param \Spryker\Zed\ShipmentType\Persistence\ShipmentTypeRepositoryInterface $shipmentTypeRepository
-     */
     public function __construct(
         ShipmentTypeReaderInterface $shipmentTypeReader,
         ShipmentTypeRepositoryInterface $shipmentTypeRepository
@@ -38,11 +34,6 @@ class ShipmentMethodCollectionExpander implements ShipmentMethodCollectionExpand
         $this->shipmentTypeRepository = $shipmentTypeRepository;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentMethodCollectionTransfer $shipmentMethodCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentMethodCollectionTransfer
-     */
     public function expandWithShipmentType(ShipmentMethodCollectionTransfer $shipmentMethodCollectionTransfer): ShipmentMethodCollectionTransfer
     {
         $shipmentMethodIds = $this->extractShipmentMethodIdsFromShipmentMethodTransfers($shipmentMethodCollectionTransfer->getShipmentMethods());

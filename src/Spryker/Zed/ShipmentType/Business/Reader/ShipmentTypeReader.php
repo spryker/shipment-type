@@ -24,10 +24,6 @@ class ShipmentTypeReader implements ShipmentTypeReaderInterface
      */
     protected ShipmentTypeStoreRelationshipExpanderInterface $shipmentTypeStoreRelationshipExpander;
 
-    /**
-     * @param \Spryker\Zed\ShipmentType\Persistence\ShipmentTypeRepositoryInterface $shipmentTypeRepository
-     * @param \Spryker\Zed\ShipmentType\Business\Expander\ShipmentTypeStoreRelationshipExpanderInterface $shipmentTypeStoreRelationshipExpander
-     */
     public function __construct(
         ShipmentTypeRepositoryInterface $shipmentTypeRepository,
         ShipmentTypeStoreRelationshipExpanderInterface $shipmentTypeStoreRelationshipExpander
@@ -36,11 +32,6 @@ class ShipmentTypeReader implements ShipmentTypeReaderInterface
         $this->shipmentTypeStoreRelationshipExpander = $shipmentTypeStoreRelationshipExpander;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeCriteriaTransfer $shipmentTypeCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeCollectionTransfer
-     */
     public function getShipmentTypeCollection(
         ShipmentTypeCriteriaTransfer $shipmentTypeCriteriaTransfer
     ): ShipmentTypeCollectionTransfer {

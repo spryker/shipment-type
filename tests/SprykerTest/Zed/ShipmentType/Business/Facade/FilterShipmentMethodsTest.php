@@ -52,9 +52,6 @@ class FilterShipmentMethodsTest extends Unit
      */
     protected ShipmentTypeBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testDoesNotFilterOutShipmentMethodWithoutShipmentTypeRelation(): void
     {
         // Arrange
@@ -84,9 +81,6 @@ class FilterShipmentMethodsTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testDoesNotFilterOutShipmentMethodsIfShipmentTypeIsNotProvidedInItemTransfer(): void
     {
         // Arrange
@@ -120,9 +114,6 @@ class FilterShipmentMethodsTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testDoesNotFilterOutShipmentMethodsWhenShipmentTypeIsProvidedInItemShipmentMethod(): void
     {
         // Arrange
@@ -174,9 +165,6 @@ class FilterShipmentMethodsTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testDoesNotFilterOutShipmentMethodRelatedToActiveShipmentTypeWithStoreRelation(): void
     {
         // Arrange
@@ -210,9 +198,6 @@ class FilterShipmentMethodsTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testFiltersOutShipmentMethodRelatedToInactiveShipmentType(): void
     {
         // Arrange
@@ -258,9 +243,6 @@ class FilterShipmentMethodsTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testFiltersOutShipmentMethodRelatedToShipmentTypeWhichIsNotAvailableForStore(): void
     {
         // Arrange
@@ -307,9 +289,6 @@ class FilterShipmentMethodsTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testCorrectlyFiltersOutMultipleShipmentMethods(): void
     {
         // Arrange
@@ -379,9 +358,6 @@ class FilterShipmentMethodsTest extends Unit
         $this->tester->getFacade()->filterShipmentGroupMethods($shipmentGroupTransfer, $quoteTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testThrowsExceptionWhenAvailableShipmentMethodsTransferPropertyIsNotProvided(): void
     {
         // Arrange
@@ -409,9 +385,6 @@ class FilterShipmentMethodsTest extends Unit
         $this->tester->getFacade()->filterShipmentGroupMethods($shipmentGroupTransfer, $quoteTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testThrowsExceptionWhenIdShipmentMethodTransferPropertyIsNotProvided(): void
     {
         // Arrange

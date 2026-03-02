@@ -87,9 +87,6 @@ class UpdateShipmentTypeCollectionTest extends Unit
      */
     protected ShipmentTypeBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -97,9 +94,6 @@ class UpdateShipmentTypeCollectionTest extends Unit
         $this->tester->ensureShipmentTypeDatabaseIsEmpty();
     }
 
-    /**
-     * @return void
-     */
     public function testUpdatesShipmentType(): void
     {
         // Arrange
@@ -143,9 +137,6 @@ class UpdateShipmentTypeCollectionTest extends Unit
         $this->assertSame(1, $this->tester->getShipmentTypeStoreRelationCountByIdShipmentType($shipmentTypeEntity->getIdShipmentType()));
     }
 
-    /**
-     * @return void
-     */
     public function testAddsShipmentTypeStoreRelation(): void
     {
         // Arrange
@@ -185,9 +176,6 @@ class UpdateShipmentTypeCollectionTest extends Unit
         $this->assertSame(2, $this->tester->getShipmentTypeStoreRelationCountByIdShipmentType($persistedShipmentTypeTransfer->getIdShipmentType()));
     }
 
-    /**
-     * @return void
-     */
     public function testRemovesShipmentTypeStoreRelation(): void
     {
         // Arrange
@@ -228,9 +216,6 @@ class UpdateShipmentTypeCollectionTest extends Unit
         $this->assertSame(1, $this->tester->getShipmentTypeStoreRelationCountByIdShipmentType($persistedShipmentTypeTransfer->getIdShipmentType()));
     }
 
-    /**
-     * @return void
-     */
     public function testUpdatesShipmentTypeStoreRelation(): void
     {
         // Arrange
@@ -269,9 +254,6 @@ class UpdateShipmentTypeCollectionTest extends Unit
         $this->assertSame(1, $this->tester->getShipmentTypeStoreRelationCountByIdShipmentType($persistedShipmentTypeTransfer->getIdShipmentType()));
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsValidationErrorIfShipmentTypeDoesNotExist(): void
     {
         // Arrange
@@ -297,9 +279,6 @@ class UpdateShipmentTypeCollectionTest extends Unit
         $this->assertSame(static::GLOSSARY_KEY_VALIDATION_SHIPMENT_TYPE_ENTITY_NOT_FOUND, $errorTransfer->getMessage());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsValidationErrorWhenShipmentTypeKeyAlreadyExists(): void
     {
         // Arrange
@@ -332,9 +311,6 @@ class UpdateShipmentTypeCollectionTest extends Unit
         $this->assertSame(static::GLOSSARY_KEY_VALIDATION_SHIPMENT_TYPE_KEY_EXISTS, $errorTransfer->getMessage());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsValidationErrorWhenShipmentTypeKeyNotUnique(): void
     {
         // Arrange
@@ -431,9 +407,6 @@ class UpdateShipmentTypeCollectionTest extends Unit
         $this->assertSame(static::GLOSSARY_KEY_VALIDATION_SHIPMENT_TYPE_NAME_INVALID_LENGTH, $errorTransfer->getMessage());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsValidationErrorWhenInvalidStoreNameProvided(): void
     {
         // Arrange

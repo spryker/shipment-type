@@ -40,11 +40,6 @@ class StoreExistsShipmentTypeValidatorRule implements ShipmentTypeValidatorRuleI
      */
     protected ValidationErrorCreatorInterface $validationErrorCreator;
 
-    /**
-     * @param \Spryker\Zed\ShipmentType\Dependency\Facade\ShipmentTypeToStoreFacadeInterface $storeFacade
-     * @param \Spryker\Zed\ShipmentType\Business\Extractor\StoreDataExtractorInterface $storeDataExtractor
-     * @param \Spryker\Zed\ShipmentType\Business\Validator\ErrorCreator\ValidationErrorCreatorInterface $validationErrorCreator
-     */
     public function __construct(
         ShipmentTypeToStoreFacadeInterface $storeFacade,
         StoreDataExtractorInterface $storeDataExtractor,

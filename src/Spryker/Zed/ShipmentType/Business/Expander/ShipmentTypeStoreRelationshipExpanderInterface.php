@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\ShipmentTypeCollectionTransfer;
 
 interface ShipmentTypeStoreRelationshipExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeCollectionTransfer $shipmentTypeCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeCollectionTransfer
-     */
     public function expandShipmentTypeCollectionWithStoreRelationships(
         ShipmentTypeCollectionTransfer $shipmentTypeCollectionTransfer
     ): ShipmentTypeCollectionTransfer;

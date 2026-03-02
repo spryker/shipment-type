@@ -33,11 +33,6 @@ class ShipmentTypeStoreRelationCreator implements ShipmentTypeStoreRelationCreat
      */
     protected StoreDataExtractorInterface $storeDataExtractor;
 
-    /**
-     * @param \Spryker\Zed\ShipmentType\Persistence\ShipmentTypeEntityManagerInterface $shipmentTypeEntityManager
-     * @param \Spryker\Zed\ShipmentType\Dependency\Facade\ShipmentTypeToStoreFacadeInterface $storeFacade
-     * @param \Spryker\Zed\ShipmentType\Business\Extractor\StoreDataExtractorInterface $storeDataExtractor
-     */
     public function __construct(
         ShipmentTypeEntityManagerInterface $shipmentTypeEntityManager,
         ShipmentTypeToStoreFacadeInterface $storeFacade,
@@ -48,11 +43,6 @@ class ShipmentTypeStoreRelationCreator implements ShipmentTypeStoreRelationCreat
         $this->storeDataExtractor = $storeDataExtractor;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeTransfer $shipmentTypeTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeTransfer
-     */
     public function createShipmentTypeStoreRelations(ShipmentTypeTransfer $shipmentTypeTransfer): ShipmentTypeTransfer
     {
         $storeRelationTransfer = $shipmentTypeTransfer->getStoreRelationOrFail();

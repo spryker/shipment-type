@@ -54,12 +54,6 @@ class ShipmentTypeHelper extends Module
         return $shipmentTypeTransfer;
     }
 
-    /**
-     * @param int $idShipmentMethod
-     * @param int $idShipmentType
-     *
-     * @return void
-     */
     public function haveShipmentMethodShipmentTypeRelation(int $idShipmentMethod, int $idShipmentType): void
     {
         $this->getShipmentMethodQuery()
@@ -67,11 +61,6 @@ class ShipmentTypeHelper extends Module
             ->update([static::COL_FK_SHIPMENT_TYPE => $idShipmentType]);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeTransfer $shipmentTypeTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeTransfer
-     */
     protected function createShipmentType(ShipmentTypeTransfer $shipmentTypeTransfer): ShipmentTypeTransfer
     {
         $shipmentTypeEntity = new SpyShipmentType();
@@ -81,11 +70,6 @@ class ShipmentTypeHelper extends Module
         return $shipmentTypeTransfer->fromArray($shipmentTypeEntity->toArray(), true);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeTransfer $shipmentTypeTransfer
-     *
-     * @return void
-     */
     protected function createShipmentTypeStoreRelations(ShipmentTypeTransfer $shipmentTypeTransfer): void
     {
         foreach ($shipmentTypeTransfer->getStoreRelation()->getStores() as $storeTransfer) {
@@ -98,11 +82,6 @@ class ShipmentTypeHelper extends Module
         }
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeTransfer $shipmentTypeTransfer
-     *
-     * @return void
-     */
     protected function deleteShipmentType(ShipmentTypeTransfer $shipmentTypeTransfer): void
     {
         $this->getShipmentTypeStoreQuery()
@@ -114,25 +93,16 @@ class ShipmentTypeHelper extends Module
             ->delete();
     }
 
-    /**
-     * @return \Orm\Zed\ShipmentType\Persistence\SpyShipmentTypeQuery
-     */
     protected function getShipmentTypeQuery(): SpyShipmentTypeQuery
     {
         return SpyShipmentTypeQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\ShipmentType\Persistence\SpyShipmentTypeStoreQuery
-     */
     protected function getShipmentTypeStoreQuery(): SpyShipmentTypeStoreQuery
     {
         return SpyShipmentTypeStoreQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\Shipment\Persistence\SpyShipmentMethodQuery
-     */
     protected function getShipmentMethodQuery(): SpyShipmentMethodQuery
     {
         return SpyShipmentMethodQuery::create();

@@ -40,12 +40,6 @@ class ShipmentTypeUpdater implements ShipmentTypeUpdaterInterface
      */
     protected ShipmentTypeGrouperInterface $shipmentTypeGrouper;
 
-    /**
-     * @param \Spryker\Zed\ShipmentType\Persistence\ShipmentTypeEntityManagerInterface $shipmentTypeEntityManager
-     * @param \Spryker\Zed\ShipmentType\Business\Validator\ShipmentTypeValidatorInterface $shipmentTypeValidator
-     * @param \Spryker\Zed\ShipmentType\Business\Updater\ShipmentTypeStoreRelationUpdaterInterface $shipmentTypeStoreRelationUpdater
-     * @param \Spryker\Zed\ShipmentType\Business\Grouper\ShipmentTypeGrouperInterface $shipmentTypeGrouper
-     */
     public function __construct(
         ShipmentTypeEntityManagerInterface $shipmentTypeEntityManager,
         ShipmentTypeValidatorInterface $shipmentTypeValidator,
@@ -58,11 +52,6 @@ class ShipmentTypeUpdater implements ShipmentTypeUpdaterInterface
         $this->shipmentTypeGrouper = $shipmentTypeGrouper;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeCollectionRequestTransfer $shipmentTypeCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeCollectionResponseTransfer
-     */
     public function updateShipmentTypeCollection(
         ShipmentTypeCollectionRequestTransfer $shipmentTypeCollectionRequestTransfer
     ): ShipmentTypeCollectionResponseTransfer {
@@ -105,11 +94,6 @@ class ShipmentTypeUpdater implements ShipmentTypeUpdaterInterface
         return $persistedShipmentTypeTransfers;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeCollectionRequestTransfer $shipmentTypeCollectionRequestTransfer
-     *
-     * @return void
-     */
     protected function assertRequiredFields(ShipmentTypeCollectionRequestTransfer $shipmentTypeCollectionRequestTransfer): void
     {
         $shipmentTypeCollectionRequestTransfer
@@ -128,11 +112,6 @@ class ShipmentTypeUpdater implements ShipmentTypeUpdaterInterface
         }
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreRelationTransfer $storeRelationTransfer
-     *
-     * @return void
-     */
     protected function assertRequiredStoreRelationFields(StoreRelationTransfer $storeRelationTransfer): void
     {
         $storeRelationTransfer->requireStores();

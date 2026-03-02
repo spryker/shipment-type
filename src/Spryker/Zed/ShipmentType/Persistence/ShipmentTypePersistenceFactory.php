@@ -21,33 +21,21 @@ use Spryker\Zed\ShipmentType\ShipmentTypeDependencyProvider;
  */
 class ShipmentTypePersistenceFactory extends AbstractPersistenceFactory
 {
-    /**
-     * @return \Orm\Zed\ShipmentType\Persistence\SpyShipmentTypeQuery
-     */
     public function createShipmentTypeQuery(): SpyShipmentTypeQuery
     {
         return SpyShipmentTypeQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\ShipmentType\Persistence\SpyShipmentTypeStoreQuery
-     */
     public function createShipmentTypeStoreQuery(): SpyShipmentTypeStoreQuery
     {
         return SpyShipmentTypeStoreQuery::create();
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentType\Persistence\Propel\Mapper\ShipmentTypeMapper
-     */
     public function createShipmentTypeMapper(): ShipmentTypeMapper
     {
         return new ShipmentTypeMapper();
     }
 
-    /**
-     * @return \Orm\Zed\Shipment\Persistence\Base\SpyShipmentMethodQuery
-     */
     public function getShipmentMethodPropelQuery(): SpyShipmentMethodQuery
     {
         return $this->getProvidedDependency(ShipmentTypeDependencyProvider::PROPEL_QUERY_SHIPMENT_METHOD);

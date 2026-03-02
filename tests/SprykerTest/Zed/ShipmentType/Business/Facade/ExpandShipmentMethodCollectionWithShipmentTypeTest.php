@@ -33,9 +33,6 @@ class ExpandShipmentMethodCollectionWithShipmentTypeTest extends Unit
      */
     protected ShipmentTypeBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testExpandsShipmentMethodWithCorrespondingShipmentType(): void
     {
         // Arrange
@@ -65,9 +62,6 @@ class ExpandShipmentMethodCollectionWithShipmentTypeTest extends Unit
         $this->assertSame($shipmentTypeTransfer->getIdShipmentTypeOrFail(), $expandedShipmentMethodTransfer->getShipmentType()->getIdShipmentType());
     }
 
-    /**
-     * @return void
-     */
     public function testDoesNothingWhenShipmentMethodDoesNotHaveShipmentTypeRelation(): void
     {
         // Arrange
@@ -88,9 +82,6 @@ class ExpandShipmentMethodCollectionWithShipmentTypeTest extends Unit
         $this->assertNull($shipmentMethodCollectionTransfer->getShipmentMethods()->getIterator()->current()->getShipmentType());
     }
 
-    /**
-     * @return void
-     */
     public function testThrowsExceptionWhenIdShipmentMethodIsNotProvided(): void
     {
         // Arrange

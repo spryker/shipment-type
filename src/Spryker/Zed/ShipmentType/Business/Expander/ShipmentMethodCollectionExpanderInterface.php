@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\ShipmentMethodCollectionTransfer;
 
 interface ShipmentMethodCollectionExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentMethodCollectionTransfer $shipmentMethodCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentMethodCollectionTransfer
-     */
     public function expandWithShipmentType(ShipmentMethodCollectionTransfer $shipmentMethodCollectionTransfer): ShipmentMethodCollectionTransfer;
 }

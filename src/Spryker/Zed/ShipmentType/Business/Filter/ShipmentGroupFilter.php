@@ -20,9 +20,6 @@ class ShipmentGroupFilter implements ShipmentGroupFilterInterface
      */
     protected ShipmentTypeRepositoryInterface $shipmentTypeRepository;
 
-    /**
-     * @param \Spryker\Zed\ShipmentType\Persistence\ShipmentTypeRepositoryInterface $shipmentTypeRepository
-     */
     public function __construct(ShipmentTypeRepositoryInterface $shipmentTypeRepository)
     {
         $this->shipmentTypeRepository = $shipmentTypeRepository;
@@ -108,11 +105,6 @@ class ShipmentGroupFilter implements ShipmentGroupFilterInterface
         return $shipmentTypeUuids;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ItemTransfer $itemTransfer
-     *
-     * @return bool
-     */
     protected function hasShipmentTypeInShipment(ItemTransfer $itemTransfer): bool
     {
         return $itemTransfer->getShipment()

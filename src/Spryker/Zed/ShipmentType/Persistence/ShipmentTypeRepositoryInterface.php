@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\ShipmentTypeCriteriaTransfer;
 
 interface ShipmentTypeRepositoryInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeCriteriaTransfer $shipmentTypeCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeCollectionTransfer
-     */
     public function getShipmentTypeCollection(
         ShipmentTypeCriteriaTransfer $shipmentTypeCriteriaTransfer
     ): ShipmentTypeCollectionTransfer;
