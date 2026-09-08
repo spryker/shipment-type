@@ -124,4 +124,19 @@
         <property name="collection" type="array" singular="aclEntityMetadata" associative="true"/>
     </transfer>
 
+    <transfer name="ValidationResponse">
+    </transfer>
+
+    <transfer name="ValidationError">
+    </transfer>
+
+    <transfer name="ProductConcreteCollectionRequest" strict="true">
+    </transfer>
+
+    <transfer name="ProductConcreteCollectionResponse" strict="true">
+    </transfer>
+
+    <transfer name="ProductConcrete">
+    </transfer>
+
 </transfers>

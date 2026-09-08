@@ -22,6 +22,8 @@ use Spryker\Zed\ShipmentType\Business\Filter\ShipmentGroupFilter;
 use Spryker\Zed\ShipmentType\Business\Filter\ShipmentGroupFilterInterface;
 use Spryker\Zed\ShipmentType\Business\Grouper\ShipmentTypeGrouper;
 use Spryker\Zed\ShipmentType\Business\Grouper\ShipmentTypeGrouperInterface;
+use Spryker\Zed\ShipmentType\Business\Product\Validator\ProductShipmentTypeValidator;
+use Spryker\Zed\ShipmentType\Business\Product\Validator\ProductShipmentTypeValidatorInterface;
 use Spryker\Zed\ShipmentType\Business\Reader\ShipmentTypeReader;
 use Spryker\Zed\ShipmentType\Business\Reader\ShipmentTypeReaderInterface;
 use Spryker\Zed\ShipmentType\Business\Updater\ShipmentTypeStoreRelationUpdater;
@@ -211,5 +213,10 @@ class ShipmentTypeBusinessFactory extends AbstractBusinessFactory
     public function getStoreFacade(): ShipmentTypeToStoreFacadeInterface
     {
         return $this->getProvidedDependency(ShipmentTypeDependencyProvider::FACADE_STORE);
+    }
+
+    public function createProductShipmentTypeValidator(): ProductShipmentTypeValidatorInterface
+    {
+        return new ProductShipmentTypeValidator($this->getRepository());
     }
 }
